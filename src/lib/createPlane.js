@@ -55,7 +55,8 @@ const modifyVerticesWithHeightMap = async positions => {
     // positions[i + 2] = map[x] ? (map[x][y] ? map[x][y] * 4 : 0) : 0;
 
     // max height
-    positions[i + 2] = (p11 + p12 + p21 + p22) / 4;
+    x = (p11 + p12 + p21 + p22) / 4;
+    positions[i + 2] = x < 50 ? 0 : x;
   }
 };
 
@@ -64,8 +65,8 @@ const createPlane = async () => {
     new PlaneGeometry(2500, 2500, 256, 256),
     new MeshStandardMaterial({
       color: "dodgerblue",
-      transparent: true,
-      opacity: 0.5,
+      // transparent: true,
+      // opacity: 0.5,
     })
   );
 

@@ -18,7 +18,9 @@ const setScene = (parent, dispatch) => {
   //scene
   const scene = new Scene();
   //lights
-  Object.values(createLights()).forEach(light => scene.add(light));
+  Object.values(createLights()).forEach(light => {
+    scene.add(light);
+  });
 
   //domEL
   const { domElement } = renderer;

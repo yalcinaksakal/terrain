@@ -5,7 +5,7 @@ const heightMap = async () => {
   const ctx = canvas.getContext("2d");
 
   const image = new Image();
-  image.src = "images/ya.png";
+  image.src = "images/ya2.png";
   await image.decode();
   ctx.drawImage(image, 0, 0);
 
