@@ -3,7 +3,7 @@ import { DirectionalLight, AmbientLight, PointLight } from "three";
 const createLights = () => {
   //lights
   const light = new DirectionalLight(0xffffff);
-  light.position.set(-500, 200, 0);
+  light.position.set(100, 100, 100);
   light.target.position.set(0, 200, 0);
   light.castShadow = true;
   light.shadow.bias = -0.01;
