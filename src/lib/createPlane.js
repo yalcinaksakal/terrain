@@ -65,6 +65,7 @@ const createPlane = async () => {
     new PlaneGeometry(2500, 2500, 256, 256),
     new MeshStandardMaterial({
       color: "dodgerblue",
+      // vertexColors: true,
       // transparent: true,
       // opacity: 0.5,
     })
@@ -77,7 +78,7 @@ const createPlane = async () => {
   plane.position.set(0, 0, 0);
 
   await modifyVerticesWithHeightMap(plane.geometry.attributes.position.array);
-
+  console.log(plane.geometry.attributes);
   return plane;
 };
 

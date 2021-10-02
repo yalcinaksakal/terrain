@@ -9,10 +9,10 @@ import {
 
 const createLights = () => {
   //lights
-  const light = new DirectionalLight(0xffffff, 0.5);
+  const light = new DirectionalLight(0xffffff, 0.2);
   light.position.set(100, 100, 100);
   light.target.position.set(0, 200, 0);
-  light.castShadow = false;
+  light.castShadow = true;
   light.shadow.bias = -0.01;
   light.shadow.mapSize.width = 2048;
   light.shadow.mapSize.height = 2048;
@@ -25,10 +25,10 @@ const createLights = () => {
 
   const helper = new DirectionalLightHelper(light);
 
-  const plight = new PointLight("white", 0.1, 2000);
-  plight.position.set(0, -200, 0);
-  const plight2 = new PointLight("white", 1, 2000);
-  plight2.position.set(0, 200, 0);
+  const plight = new PointLight("green", 1, 2000);
+  plight.position.set(0, -1200, 0);
+  const plight2 = new PointLight("dodgerblue", 1, 1500);
+  plight2.position.set(0, 1000, 0);
   // plight.castShadow = true;
   const h2 = new PointLightHelper(plight, 50);
   // const plight2 = new PointLight("red", 0.4);
@@ -47,7 +47,7 @@ const createLights = () => {
   return {
     directional: light,
     // helper,
-    ambient: new AmbientLight(0x404040),
+    ambient: new AmbientLight(0x404040, 0.3),
     // spotLight,
     pointLight: plight,
     // h2,
