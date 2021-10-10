@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { useSelector } from "react-redux";
 import Canvas from "./components/Canvas/Canvas";
 import Loading from "./components/Loading/Loading";
@@ -6,7 +6,7 @@ import Paragraph from "./components/Paragraph/Paragraph";
 import styles from "./App.module.css";
 function App() {
   const { isLoading } = useSelector(state => state.loading);
-  const [start, setStart] = useState(false);
+  // const [start, setStart] = useState(false);
 
   return (
     // <>

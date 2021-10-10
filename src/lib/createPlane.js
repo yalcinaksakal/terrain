@@ -3,14 +3,14 @@ import {
   MeshStandardMaterial,
   DoubleSide,
   Mesh,
-  Vector2,
+  // Vector2,
 } from "three";
 import { DEGREE } from "../config/content";
 import heightMap from "./heightMap";
 
 //Plane
 let plane;
-
+/*
 const modifyVertices = positions => {
   for (let i = 0; i < positions.length; i += 3) {
     //modify height
@@ -28,7 +28,7 @@ const modifyVerticesWithBump = positions => {
     positions[i + 2] = height * 1500;
   }
 };
-
+*/
 const modifyVerticesWithHeightMap = async positions => {
   const map = await heightMap();
   let x, y, xf, yf, x1, y1, x2, y2, p11, p21, p12, p22;
@@ -60,7 +60,7 @@ const modifyVerticesWithHeightMap = async positions => {
     positions[i + 2] = x < 50 ? 0 : x;
   }
 };
-
+/*
 const modifyVerticesWithNoise = positions => {
   let x, y, xf, yf, x1, y1, x2, y2, p11, p21, p12, p22;
 
@@ -86,7 +86,7 @@ const modifyVerticesWithNoise = positions => {
     positions[i + 2] = x < 50 ? 0 : x;
   }
 };
-
+*/
 const createPlane = async () => {
   plane = new Mesh(
     new PlaneGeometry(2500, 2500, 256, 256),

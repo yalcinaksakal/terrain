@@ -2,9 +2,9 @@ import {
   DirectionalLight,
   AmbientLight,
   PointLight,
-  DirectionalLightHelper,
-  SpotLight,
-  PointLightHelper,
+  // DirectionalLightHelper,
+  // SpotLight,
+  // PointLightHelper,
 } from "three";
 
 const createLights = () => {
@@ -23,14 +23,14 @@ const createLights = () => {
   light.shadow.camera.top = 200;
   light.shadow.camera.bottom = -200;
 
-  const helper = new DirectionalLightHelper(light);
+  // const helper = new DirectionalLightHelper(light);
 
   const plight = new PointLight("green", 1, 2000);
   plight.position.set(0, -1200, 0);
   const plight2 = new PointLight("dodgerblue", 1, 1500);
   plight2.position.set(0, 1000, 0);
   // plight.castShadow = true;
-  const h2 = new PointLightHelper(plight, 50);
+  // const h2 = new PointLightHelper(plight, 50);
   // const plight2 = new PointLight("red", 0.4);
   // plight2.position.set(100, 0, 0);
   // const spotLight = new SpotLight("white");
