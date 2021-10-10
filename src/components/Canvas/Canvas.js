@@ -6,7 +6,6 @@ const Canvas = () => {
   const canvasRef = useRef();
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log("useEffect");
     const { onResize, keyDownHandler, keyUpHandler, animate } = setScene(
       canvasRef.current,
       dispatch

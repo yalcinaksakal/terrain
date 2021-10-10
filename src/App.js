@@ -9,22 +9,22 @@ function App() {
   const [start, setStart] = useState(false);
 
   return (
+    // <>
+    //   {!start && (
+    //     <div className={styles.home}>
+    //       <button onClick={() => setStart(true)}>Start</button>
+    //     </div>
+    //   )}
+    //   {start && (
     <>
-      {!start && (
-        <div className={styles.home}>
-          <button onClick={() => setStart(true)}>Start</button>
-        </div>
-      )}
-      {start && (
-        <>
-          {isLoading && <Loading />}
-          <Paragraph />
-          <div className={styles.home}>
-            <Canvas />
-          </div>
-        </>
-      )}
+      {isLoading && <Loading />}
+      <Paragraph />
+      <div className={styles.home}>
+        <Canvas />
+      </div>
     </>
+    //   )}
+    // </>
   );
 }
 
