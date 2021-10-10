@@ -3,4 +3,4 @@ Redux
 Three.js
 
 live demo
-https://space2.vercel.app/
+https://terrain-h64iac4dr-yalcinaksakal.vercel.app/
